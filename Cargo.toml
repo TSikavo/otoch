@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+clap = { version = "4.5.23", features = ["derive"] }
+gtk = { version = "0.9", package = "gtk4" }
+gtk-layer-shell = { version = "0.4", package = "gtk4-layer-shell" }
+adw = { version= "0.7", package = "libadwaita", features = ["v1_6"] }
