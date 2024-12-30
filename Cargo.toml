@@ -3,8 +3,22 @@ name = "otoch"
 version = "0.1.0"
 edition = "2021"
 
+[package.metadata]
+app_id = "dev.tsikavo.otoch"
+
+[[bin]]
+name = "otoch"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "otoch-service"
+path = "src/bin/service.rs"
+
 [dependencies]
-clap = { version = "4.5.23", features = ["derive"] }
+clap = { version = "4.5", features = ["derive"] }
 gtk = { version = "0.9", package = "gtk4" }
 gtk-layer-shell = { version = "0.4", package = "gtk4-layer-shell" }
 adw = { version= "0.7", package = "libadwaita", features = ["v1_6"] }
+
+[build-dependencies]
+toml = { version = "0.8.19" }
